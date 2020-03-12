@@ -1,0 +1,106 @@
+.single-success-story {
+	.site-content {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-rows: auto auto;
+		grid-template-rows: auto auto;
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+		background: $white;
+		padding: 0;
+	}
+
+	.success-bg {
+		grid-row: 1;
+		grid-column: 1;
+		opacity: .35;
+		height: 28.125vw;
+		background: linear-gradient(to bottom, transparent, $white), url(../images/defaults/success_bg_cam.jpg) no-repeat center top / cover;
+	}
+
+	.content-area {
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 2;
+		grid-row: 1 / -1;
+		-ms-grid-column: 1;
+		grid-column: 1;
+		position: relative;
+		padding: 16.875vw 1.25em 6.25em;
+
+		@include breakpoint(desktop) {
+			padding: 16.875vw 3vw 9.375em;
+		}
+
+		& > .wrapper {
+			max-width: 75rem;
+		}
+	}
+
+	.success-story {
+		@include breakpoint(tablet) {
+			display: flex;
+			align-items: flex-start;
+		}
+	}
+
+	.entry-header {
+		margin-bottom: 7.5vw;
+		color: $bg_green;
+		font-family: $heading_font;
+		text-align: center;
+
+		@include breakpoint(tablet) {
+			flex: 0 0 auto;
+			width: 20em;
+			max-width: 30%;
+			margin: 0 5% 0 0;
+		}
+	}
+
+	.post-thumbnail {
+		width: 10em;
+		margin: 0 auto .625em;
+
+		@include breakpoint(tablet) {
+			width: 11.25em;
+		}
+
+		@include breakpoint(desktop) {
+			width: 12.5em;
+		}
+
+		img {
+			width: 100%;
+			border: .375em solid $csu_gold;
+			border-radius: 25%;
+		}
+	}
+
+	.entry-title {
+		margin: 0;
+		color: inherit;
+		font-size: 1.125em;
+	}
+
+	.success-question {
+		margin-bottom: .5rem;
+		font-size: 1.25em;
+	}
+
+	.success-role {
+		margin-bottom: 0;
+		font-size: .875em;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 40%;
+			margin: .375rem auto;
+			border-bottom: .0625rem solid $csu_gold;
+		}
+	}
+
+	.success-org {
+		font-size: .875em;
+	}
+}

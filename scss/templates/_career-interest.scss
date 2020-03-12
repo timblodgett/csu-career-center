@@ -1,0 +1,156 @@
+.tax-career-interest {
+	.entry-header {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		min-height: 40vw;
+		padding: 1.25rem;
+		background: no-repeat center center / cover;
+
+		@include breakpoint(tablet) {
+			min-height: 50vh;
+			padding: 17.5vw 3vw 1.25rem;
+		}
+
+		@include breakpoint(desktop) {
+			padding-bottom: 2.5vw;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: $overlay;
+		}
+
+		.wrapper {
+			position: relative;
+		}
+	}
+
+	.header-content {
+		max-width: 75rem;
+
+		@include breakpoint(tablet) {
+			border-left: .125rem solid $reservoir;
+			border-left: .125rem solid $alfalfa;
+			padding: .25rem .375rem .25rem .5rem;
+		}
+	}
+
+	.entry-title {
+		margin: 0;
+		color: $white;
+		font-size: 1.25em;
+		@include tracking(40);
+		line-height: 1.2;
+		text-transform: uppercase;
+
+		@include breakpoint(phone) {
+			font-size: 1.5em;
+		}
+
+		@include breakpoint(tablet) {
+			font-size: 1.75em;
+		}
+
+		@include breakpoint(desktop) {
+			font-size: 2em;
+		}
+	}
+
+	.entry-desc {
+		margin-top: 1em;
+		color: $white;
+		font-weight: 300;
+		@include tracking(40);
+	}
+
+	.content-container {
+		padding: 1.25rem;
+
+		@include breakpoint(tablet) {
+			padding: 3vw ;
+		}
+
+		.wrapper {
+			@include breakpoint(desktop) {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+	}
+
+	.content-area {
+		width: 100%;
+	}
+
+
+	.widget-area {
+		flex: 1 0 auto;
+		width: 100%;
+		margin-top: 2.5rem;
+
+		@include breakpoint(tablet) {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		@include breakpoint(desktop) {
+			display: block;
+			width: 20rem;
+			margin: 0 0 0 2.5rem;
+		}
+
+		.widget {
+			@include breakpoint(tablet) {
+				width: calc(50% - (1.25rem /2));
+			}
+
+			@include breakpoint(desktop) {
+				width: 100%;
+			}
+
+			&:not(:first-child) {
+				margin-top: 1.25rem;
+
+				@include breakpoint(tablet) {
+					margin: 0 0 0 1.25rem;
+				}
+
+				@include breakpoint(desktop) {
+					margin: 1.25rem 0 0 0;
+				}
+			}
+		}
+
+		.widget-title {
+			background: $csu_green;
+			margin: 0;
+			padding: .75rem;
+			color: $white;
+			font-size: 1em;
+			@include tracking(40);
+		}
+
+		.widget-content {
+			border: .125rem solid $lt_grey;
+			border-top: none;
+			padding: .75rem;
+		}
+	}
+
+	.not-found {
+		text-align: center;
+	}
+
+	.view-all-link {
+		margin-top: 1.25em;
+		text-align: center;
+	}
+}

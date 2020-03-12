@@ -1,0 +1,136 @@
+.featured-success-story {
+	display: flex;
+	align-items: center;
+	min-height: 40vw;
+	box-shadow: none;
+	background: no-repeat 75% center / cover;
+	padding: 1.5em;
+	color: $bg_green;
+
+	@include breakpoint(tablet) {
+		padding: 12.5vw 9.375vw;
+		padding: 1.5em 3vw;
+	}
+
+	@include breakpoint(desktop) {
+		background-position: 62.5% center;
+		padding: 2.5% 3vw;
+	}
+
+	.story {
+		text-align: center;
+
+		@include breakpoint(tablet) {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+		}
+	}
+
+	.story-content {
+		background: $overlay_wt;
+		padding: 1em;
+
+		@include breakpoint(phone) {
+			margin: 5%;
+		}
+
+		@include breakpoint(desktop) {
+			width: 40%;
+			padding: 2.5%;
+		}
+	}
+
+	.story-excerpt {
+		font-size: 1em;
+		font-weight: 300;
+		@include tracking(20);
+
+		@include breakpoint(tablet) {
+			font-size: 1.125em;
+		}
+	}
+
+	.story-person {
+		margin-top: 1rem;
+		font-family: $heading_font;
+		font-size: 1em;
+		font-weight: 600;
+		@include tracking(40);
+		line-height: 1.2;
+		text-transform: uppercase;
+	}
+
+	.story-name {
+		margin: 0;
+		font-size: 1.0625em;
+	}
+
+	.story-degree {
+		margin: 0;
+		font-size: .9375em;
+	}
+
+	.story-career {
+		margin-top: .5rem;
+		font-family: $heading_font;
+		@include tracking(40);
+		line-height: 1.2;
+	}
+
+	.story-role {
+		margin: 0;
+		font-size: .9375em;
+	}
+
+	.story-org {
+		margin: 0;
+		font-size: .875em;
+	}
+
+	.story-links {
+		margin-top: 1.25rem;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.this-story {
+		display: inline-block;
+		border: .125em solid;
+		border-radius: .125em;
+		padding: .5em 1em;
+		color: inherit;
+		@include tracking(40);
+		text-decoration: none;
+
+		&:visited {
+			color: inherit;
+		}
+
+		&:hover, &:focus, &:active {
+			background: $dk_green;
+			border-color: $dk_green;
+			color: $white;
+		}
+	}
+
+	.more-stories {
+		display: inline-block;
+		margin-top: .625rem;
+		color: inherit;
+		font-size: .875em;
+		@include tracking(20);
+		text-decoration: none;
+
+		&:visited {
+			color: inherit;
+		}
+
+		&:hover, &:focus, &:active {
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+}

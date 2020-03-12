@@ -1,0 +1,166 @@
+.page-template-flexible {
+	.site-content {
+		padding: 0;
+	}
+
+	.entry-header {
+		padding: 1.25rem 1.25rem 1.5rem;
+
+		@include breakpoint(tablet) {
+			padding: 1.25rem 3vw 1.5rem;
+		}
+	}
+
+	.layout-block {
+		padding: 2.5rem 1.25rem;
+
+		@include breakpoint(tablet) {
+			padding: 3vw;
+		}
+	}
+
+	.bg-none {
+		&:first-child {
+			padding-top: 0;
+		}
+
+		& + .bg-none {
+			margin-top: -2.5rem;
+			padding-top: 2.5rem;
+
+			@include breakpoint(tablet) {
+				margin-top: -3vw;
+			}
+		}
+	}
+
+	.bg-grey {
+		background: $off_white;
+
+		& + .bg-grey {
+			margin-top: -2.5rem;
+			padding-top: 2.5rem;
+
+			@include breakpoint(tablet) {
+				margin-top: -3vw;
+			}
+		}
+	}
+
+	.bg-slate {
+		background: $dark_slate;
+		color: $white;
+
+		& + .bg-slate {
+			margin-top: -2.5rem;
+			padding-top: 2.5rem;
+
+			@include breakpoint(tablet) {
+				margin-top: -3vw;
+			}
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			color: $white;
+		}
+
+		a {
+			color: $sunshine;
+
+			&:visited {
+				color: darken($sunshine, 3.75%);
+			}
+		}
+
+		.button {
+			background: lighten($sunshine, 2.5%);
+			color: $dark_slate;
+			font-weight: 600;
+
+			&:visited {
+				color: $dark_slate;
+			}
+
+			&:hover, &:focus, &:active {
+				background: darken($sunshine, 2.5%);
+				color: $dark_slate;
+			}
+		}
+	}
+
+	.side-image {
+		& > .wrapper {
+			@include breakpoint(tablet) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+		}
+
+		.image {
+			text-align: center;
+
+			@include breakpoint(tablet) {
+				flex: 0 0 auto;
+				align-self: flex-start;
+				width: calc(40% - 1.25em);
+			}
+		}
+
+		.content {
+			margin-top: 1.5em;
+
+			@include breakpoint(tablet) {
+				flex: 0 0 auto;
+				width: calc(60% - 1.25em);
+				margin: 0;
+			}
+		}
+	}
+
+	.image-right {
+		& > .wrapper {
+			flex-direction: row-reverse;
+		}
+	}
+
+	.columns {
+		@include breakpoint(tablet) {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		.column {
+			&:not(:first-child) {
+				margin-top: 2.5em;
+
+				@include breakpoint(tablet) {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.three-col {
+		text-align: center;
+
+		.block-heading {
+			margin-bottom: 1em;
+		}
+
+		.column {
+			@include breakpoint(tablet) {
+				width: calc(32% - 1.25em);
+			}
+		}
+	}
+
+	.two-col {
+		.column {
+			@include breakpoint(tablet) {
+				width: calc(50% - 1.25em);
+			}
+		}
+	}
+}

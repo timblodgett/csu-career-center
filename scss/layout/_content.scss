@@ -1,0 +1,48 @@
+.site-content {
+	-ms-grid-row: 2;
+	grid-row: 2;
+	padding: 1.25rem;
+
+	@include breakpoint(tablet) {
+		padding: 1.25rem 3vw;
+	}
+
+	.home &,
+	.tax-career-interest & {
+		padding: 0;
+	}
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	&:not(:last-child) {
+		margin-bottom: #{$line_height}em;
+	}
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.byline {
+	display: none;
+
+	.single &,
+	.group-blog & {
+		display: inline;
+	}
+}
+
+.entry-summary,
+.entry-content,
+.page-content {
+	@extend .clearfix;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 #{$line_height}em;
+}

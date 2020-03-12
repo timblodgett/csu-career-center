@@ -1,0 +1,39 @@
+{
+    "key": "group_5bbe7e4f3e2f4",
+    "title": "Success Stories Options",
+    "fields": [
+        {
+            "key": "field_5bbe7e4f41fa7",
+            "label": "\"Share Your Story\" Link",
+            "name": "success_share_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1539212026
+}

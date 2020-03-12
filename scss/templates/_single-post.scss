@@ -1,0 +1,118 @@
+.single-post {
+	.entry-header {
+		max-width: 60rem;
+		margin: 0 auto 1.75rem;
+		text-align: center;
+	}
+
+	.featured-image {
+		margin: 0 auto;
+	}
+
+	.author-info {
+		position: relative;
+		max-width: 60rem;
+		margin: 0 auto;
+	}
+
+	.author-avatar {
+		overflow: hidden;
+		width: 5em;
+		height: 5em;
+		margin: -2.5em auto 0;
+		border: .25em solid $white;
+		border-radius: 50%;
+
+		@include breakpoint(30em) {
+			width: 6em;
+			height: 6em;
+			margin-top: -3em;
+			border-width: .3em;
+		}
+
+		@include breakpoint(40em) {
+			width: 7em;
+			height: 7em;
+			margin-top: -3.5em;
+			border-width: .35em;
+		}
+
+		@include breakpoint(50em) {
+			width: 8em;
+			height: 8em;
+			margin-top: -4em;
+			border-width: .4em;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.author-name {
+		color: $black_80;
+		font-size: .875em;
+		font-weight: 600;
+		@include tracking(20);
+		text-transform: uppercase;
+	}
+
+	.entry-title {
+		max-width: 45rem;
+		margin: .5em auto 0;
+		font-size: 1.75em;
+		font-weight: 700;
+
+		@include breakpoint(tablet) {
+			font-size: 2.25em;
+		}
+
+		@include breakpoint(desktop) {
+			font-size: 2.625em;
+		}
+	}
+
+	.entry-subtitle {
+		width: 85%;
+		max-width: 35rem;
+		margin: .5em auto 0;
+		font-size: 1em;
+		@include tracking(40);
+		text-transform: uppercase;
+	}
+
+	.entry-meta {
+		align-self: center;
+		margin-top: 1em;
+		color: $black_80;
+		font-size: .875em;
+		font-weight: 300;
+		@include tracking(20);
+
+		@include breakpoint(tablet) {
+			font-size: 1em;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			width: 65%;
+			max-width: 20rem;
+			margin: 1rem auto 0;
+			border-bottom: .0625em solid $dk_grey;
+		}
+	}
+
+	.entry-content {
+		max-width: 45rem;
+		margin: 0 auto;
+	}
+
+	.author-bio {
+		background: $lt_grey;
+		border-radius: .25rem;
+		padding: 1em;
+		font-size: .875em;
+		font-style: italic;
+	}
+}

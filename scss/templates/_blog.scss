@@ -1,0 +1,176 @@
+.blog {
+	.site-content {
+		background: $off_white;
+	}
+
+	.page-title {
+		text-align: center;
+	}
+
+	.posts-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.post {
+		max-width: 17.5em;
+		margin: 1.25em auto 0;
+		text-align: center;
+
+		@include breakpoint(phone) {
+			width: calc(50% - (1.25em / 2));
+			max-width: none;
+			margin: 1.25em 0 0 1.25em;
+
+			&:nth-child(odd) {
+				margin-left: 0;
+			}
+		}
+
+		@include breakpoint(tablet) {
+			width: calc((100% / 3) - (1.25em / 3 * 2));
+
+			&:nth-child(odd) {
+				margin-left: 1.25em;
+			}
+
+			&:nth-child(3n + 1) {
+				margin-left: 0;
+			}
+		}
+
+		@include breakpoint(desktop) {
+			width: calc(25% - (1.25em / 4 * 3));
+
+			&:nth-child(3n + 1) {
+				margin-left: 1.25em;
+			}
+
+			&:nth-child(4n + 1) {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.post-link {
+		transform: translate(0);
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		background: $white;
+		color: inherit;
+		text-decoration: none;
+
+		&:visited {
+			color: inherit;
+		}
+
+		&:hover, &:active, &:focus {
+			transform: translateY(-.25em);
+			box-shadow: 0 .125em .1875em .125em rgba($black_80, .1);
+			color: inherit;
+		}
+	}
+
+	.post-image {
+		img {
+			width: 100%;
+		}
+	}
+
+	.post-details {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: 0 .75em .75em;
+	}
+
+	.author-avatar {
+		overflow: hidden;
+		width: 4em;
+		height: 4em;
+		margin: -2em auto 0;
+		border: .25em solid $white;
+		border-radius: 50%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.author-name {
+		color: $black_80;
+		font-size: .875em;
+		font-weight: 600;
+		@include tracking(20);
+		text-transform: uppercase;
+	}
+
+	.post-title {
+		margin: .5em auto;
+		font-size: 1.25em;
+		font-weight: 700;
+	}
+
+	.post-meta {
+		align-self: center;
+		margin-top: auto;
+		color: $black_80;
+		font-size: .875em;
+		font-weight: 300;
+		@include tracking(20);
+	}
+}
+
+.pagination {
+	margin-top: 1.25em;
+
+	.nav-links {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.page-numbers {
+		display: none;
+		margin: .25em;
+		padding: .375em .625em .25em;
+		border: .0625em solid $csu_green;
+		border-radius: .25em;
+		color: $csu_green;
+		font-weight: 600;
+		@include tracking(40);
+		line-height: 1.2;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		@include breakpoint(tablet) {
+			display: inline-block;
+		}
+	}
+
+	.prev,
+	.next,
+	.dots {
+		margin: .375em .625em .25em;
+		border: none;
+		padding: 0;
+	}
+
+	.prev,
+	.next {
+		display: inline-block;
+
+		&:hover, &:focus, &:active {
+			text-decoration: underline;
+		}
+	}
+
+	.current {
+		background: $csu_green;
+		color: $white;
+	}
+}

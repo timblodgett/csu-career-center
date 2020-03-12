@@ -1,0 +1,101 @@
+.page-template-partners {
+	.entry-header {
+		margin-bottom: 1.5em;
+	}
+}
+
+.partners-section {
+	padding: 1.25em;
+
+	@include breakpoint(tablet) {
+		padding: 3vw;
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 1.5em;
+	}
+
+	&__grid-item {
+		@include transition( $timeFunc: cubic-bezier(0.165, 0.84, 0.44, 1) );
+		flex: 0 0 auto;
+		width: 50%;
+		position: relative;
+		padding-top: 50%;
+
+		@include breakpoint(phone) {
+			width: calc(100% / 3);
+			padding-top: calc(100% / 3);
+		}
+
+		@include breakpoint(desktop) {
+			width: calc(100% / 6);
+			padding-top: calc(100% / 6);
+		}
+	}
+
+	&__grid-link {
+		transform: translateY(0);
+		position: relative;
+		color: $white;
+
+		&:after {
+			@include transition( $timeFunc: cubic-bezier(0.165, 0.84, 0.44, 1) );
+			content: '';
+			opacity: 0;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			box-shadow: 0 .25em .625em .0625em rgba($black, .2);
+		}
+
+		&:hover, &:focus, &:active {
+			transform: translateY(-.25em);
+			// box-shadow: 0 .25em .75em .125em rgba($black, .2);
+
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__grid-logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 10%;
+		left: 10%;
+		width: 80%;
+		height: 80%;
+		background: no-repeat center center / contain;
+
+		@include breakpoint(tablet) {
+			top: 12.5%;
+			left: 12.5%;
+			width: 75%;
+			height: 75%;
+		}
+
+		@include breakpoint(desktop) {
+			top: 15%;
+			left: 15%;
+			width: 70%;
+			height: 70%;
+		}
+	}
+
+	&__cta {
+		margin-top: 1.5em;
+		text-align: center;
+	}
+}

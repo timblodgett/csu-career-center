@@ -1,0 +1,11 @@
+{
+	"name": "csu-career-center",
+	"version": "1.0.0",
+	"description": "CSU Career Center theme",
+	"devDependencies": {
+		"grunt": "^0.4.5",
+		"grunt-contrib-sass": "^1.0.0",
+		"grunt-contrib-watch": "^1.0.0"
+	},
+	"dependencies": {}
+}

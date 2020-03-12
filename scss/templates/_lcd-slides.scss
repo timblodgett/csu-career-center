@@ -1,0 +1,23 @@
+.page-template-lcd-slides {
+	.site-header,
+	.site-footer {
+		display: none;
+	}
+
+	.site-content {
+		align-self: center;
+		padding: 0;
+	}
+
+	.slick-list {
+		overflow: hidden;
+	}
+
+	.lcd-slides-error {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		text-transform: uppercase;
+	}
+}

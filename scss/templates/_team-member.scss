@@ -1,0 +1,149 @@
+.single-team-member {
+	.site-content {
+		.wrapper {
+			max-width: 75em;
+		}
+	}
+
+	.staff-grid {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-rows: auto 1.25rem auto 1.25rem auto;
+		grid-template-rows: repeat(3, auto);
+		grid-row-gap: 1.25rem;
+		-ms-grid-columns: auto;
+		grid-template-columns: auto;
+		grid-column-gap: 1.25rem;
+
+		@include breakpoint(tablet) {
+			-ms-grid-rows: auto 1.25rem auto;
+			grid-template-rows: repeat(2, auto);
+			-ms-grid-columns: 1fr 1.25rem 1fr;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include breakpoint(desktop) {
+			-ms-grid-columns: 20rem 1.25rem 1fr;
+			grid-template-columns: 20rem 1fr;
+		}
+	}
+
+
+	.entry-header {
+		-ms-grid-row: 1;
+		text-align: center;
+
+		@include breakpoint(desktop) {
+			-ms-grid-row-span: 3;
+			grid-row: 1 / -1;
+		}
+	}
+
+	.post-thumbnail {
+		overflow: hidden;
+		width: 9.5em;
+		height: 9.5em;
+		margin: 0 auto .75rem;
+		border-radius: 50%;
+	}
+
+	.entry-header-details {
+		& > * {
+			margin-bottom: 0;
+		}
+	}
+
+	.entry-title {
+		font-family: $body_font;
+		font-size: 1.5em;
+		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	.staff-title {
+		margin-top: .75rem;
+		color: $black_80;
+		font-size: 1em;
+		@include tracking(20);
+		line-height: 1.2;
+		text-transform: uppercase;
+	}
+
+	.staff-contact {
+		p {
+			margin: 0;
+
+			&:first-child {
+				margin-top: .75rem;
+			}
+		}
+
+		.email-link {
+			color: $body_color;
+			font-weight: 700;
+			text-decoration: none;
+
+			&:visited {
+				color: $body_color;
+			}
+
+			&:hover, &:focus, &:active {
+				text-decoration: underline;
+			}
+		}
+	}
+
+
+	.bio-details {
+		-ms-grid-row: 3;
+		text-align: center;
+
+		@include breakpoint(tablet) {
+			-ms-grid-row: 1;
+			-ms-grid-row-align: center;
+			align-self: center;
+			-ms-grid-column: 3;
+		}
+
+		@include breakpoint(desktop) {
+			-ms-grid-row-align: start;
+			align-self: start;
+			text-align: inherit;
+		}
+	}
+
+	.bio-detail {
+		&:not(:last-child) {
+			margin-bottom: .75rem;
+		}
+
+		span {
+			display: block;
+			color: $heading_color;
+			font-weight: bold;
+			line-height: 1.2;
+
+			@include breakpoint(desktop) {
+				display: inline;
+			}
+		}
+	}
+
+
+	.entry-content {
+		-ms-grid-row: 5;
+
+		@include breakpoint(tablet) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 3;
+			grid-column: 1 / -1;
+		}
+
+		@include breakpoint(desktop) {
+			-ms-grid-column: 3;
+			-ms-grid-column-span: 1;
+			grid-column: 2 / -1;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.page-template-calendar {
+	.entry-header {
+		margin-bottom: 1.5em;
+	}
+
+	.mobile-calendar {
+		@include breakpoint(tablet) {
+			display: none;
+		}
+	}
+
+	.full-calendar {
+		display: none;
+
+		@include breakpoint(tablet) {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,155 @@
+.page-template-explore-careers {
+	.site-content {
+		padding: 0;
+	}
+
+	.entry-header {
+		padding: 1.25em;
+		text-align: center;
+
+		@include breakpoint(tablet) {
+			padding: 1.25em 3vw;
+		}
+	}
+
+	.entry-content {
+		padding: 0 1.25em 1.25em;
+
+		@include breakpoint(tablet) {
+			padding: 0 3vw 1.25em;
+		}
+	}
+
+	.career-interests {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.career-interest {
+		width: 100%;
+		padding: 7.5vw 1.25em;
+
+		@include breakpoint(tablet) {
+			padding: 3vw;
+		}
+
+		.wrapper {
+			display: -ms-grid;
+			display: grid;
+			grid-gap: 1.25em;
+			-ms-grid-rows: auto 1.25em auto;
+			grid-template-rows: auto auto;
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+			max-width: 30rem;
+
+			@include breakpoint(tablet) {
+				grid-gap: 2.5em;
+				-ms-grid-rows: 1fr;
+				grid-template-rows: 1fr;
+				-ms-grid-columns: 2fr 2.5em 3fr;
+				grid-template-columns: 2fr 3fr;
+				align-items: center;
+				max-width: 75rem;
+			}
+
+			@include breakpoint(desktop) {
+				-ms-grid-columns: 3fr 2.5em 4fr;
+				grid-template-columns: 3fr 4fr;
+			}
+		}
+
+		&:nth-child(odd) {
+			background: $off_white;
+		}
+
+		&:nth-child(even) {
+			.wrapper {
+				@include breakpoint(tablet) {
+					-ms-grid-columns: 3fr 2.5em 2fr;
+					grid-template-columns: 3fr 2fr;
+				}
+
+				@include breakpoint(desktop) {
+					-ms-grid-columns: 4fr 2.5em 3fr;
+					grid-template-columns: 4fr 3fr;
+				}
+			}
+
+			.career-image {
+				@include breakpoint(tablet) {
+					-ms-grid-row: 1;
+					grid-row: 1;
+					-ms-grid-column: 3;
+					grid-column: 2;
+				}
+			}
+
+			.career-details {
+				@include breakpoint(tablet) {
+					-ms-grid-row: 1;
+					grid-row: 1;
+					-ms-grid-column: 1;
+					grid-column: 1;
+				}
+			}
+		}
+	}
+
+	.career-image {
+		-ms-grid-row: 1;
+		grid-row: 1;
+		-ms-grid-column: 1;
+		grid-column: 1;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.career-details {
+		-ms-grid-row: 3;
+		grid-row: 2;
+		-ms-grid-column: 1;
+		grid-column: 1;
+		text-align: center;
+
+		@include breakpoint(tablet) {
+			-ms-grid-row: 1;
+			grid-row: 1;
+			-ms-grid-column: 3;
+			grid-column: 2;
+		}
+	}
+
+	.career-name {
+		font-size: 1.25em;
+
+		@include breakpoint(desktop) {
+			font-size: 1.5em;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+
+			&:visited {
+				color: inherit;
+			}
+
+			&:hover, &:focus, &:active {
+				color: inherit;
+				text-decoration: underline;
+			}
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			width: 7.5rem;
+			height: .125rem;
+			margin: .625em auto;
+			background: $aggie_orange;
+		}
+	}
+}
